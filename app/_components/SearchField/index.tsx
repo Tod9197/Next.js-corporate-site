@@ -34,7 +34,7 @@ function SearchFieldComponent() {
             type="text"
             name="q"
             defaultValue={searchParams.get("q") ?? undefined}
-            placeholder="キーワードを入力"
+            placeholder="キーワードを入力してください"
             className={styles.searchInput}
           />
         </label>
@@ -45,10 +45,8 @@ function SearchFieldComponent() {
 
 export default function SearchField() {
   return (
-    <>
-      <Suspense>
-        <SearchFieldComponent />
-      </Suspense>
-    </>
+    <Suspense>
+      <SearchFieldComponent />
+    </Suspense>
   );
 }
